@@ -29,6 +29,16 @@ fn process_instruction(
     
     msg!("Hi, Solana!");
 
+    msg!("Account: {:#?}", account);
+
+    msg!("Adding 1 to counter");
+
+    let mut counter = Counter::try_from_slice(&account.data.borrow())?;
+    counter.count += 1;
+    counter.serialize(&mut &mut account.data.borrow_mut()[..])?;
+
+    msg!("Counter is at: {}", counter.count);
+
     Ok(())
 }
 
