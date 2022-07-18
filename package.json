@@ -1,0 +1,12 @@
+{
+  "name": "hello-solana",
+  "version": "1.0.0",
+  "description": "For custom scripts only",
+  "repository": "https://github.com/BerzanXYZ/hello-solana.git",
+  "author": "Berzan <berzan@tutanota.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy": "cd program && echo \"Building the program...\" && cargo build-bpf && echo \"Deploying it...\" && solana program deploy ./target/deploy/program.so && echo \"Successfully deployed!...\""
+  }
+}
