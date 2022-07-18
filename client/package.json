@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "type": "module",
   "version": "1.0.0",
   "description": "Testing client for the Solana program",
   "main": "index.js",
