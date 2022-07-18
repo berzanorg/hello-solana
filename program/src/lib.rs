@@ -4,7 +4,7 @@ use solana_program::{
     entrypoint::ProgramResult,
     msg,
     pubkey::Pubkey,
-}
+};
 
 entrypoint!(process_instruction);
 
