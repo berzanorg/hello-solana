@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Testing client for the Solana program",
+  "main": "index.js",
+  "repository": "https://github.com/BerzanXYZ/hello-solana",
+  "author": "Berzan",
+  "license": "MIT",
+  "private": "true"
+}
