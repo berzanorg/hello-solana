@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build": "cd program && echo \"Building the program...\" && cargo build-bpf && echo \"Successfully built!\"",
     "deploy": "cd program && echo \"Building the program...\" && cargo build-bpf && echo \"Deploying it...\" && solana program deploy ./target/deploy/program.so && echo \"Successfully deployed!...\""
   }
 }
