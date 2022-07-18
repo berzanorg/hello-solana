@@ -10,11 +10,11 @@ entrypoint!(process_instruction);
 
 fn process_instruction(
     program_id: &Pubkey,
-    accounts: &[account_info],
+    accounts: &[AccountInfo],
     instruction_data: &[u8],
 ) -> ProgramResult {
     
-    msg!("Hello, Solana!")
+    msg!("Hello, Solana!");
 
     Ok(())
 }
