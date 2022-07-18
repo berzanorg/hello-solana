@@ -34,6 +34,7 @@ const PROGRAM_ID_IN_BASE58 = "4QUoN6yh4v4gB11TzwFjNAo9GULUB81hwPBRFfDPUkp1";
 
     // Make a tx with the Program
     console.log('Pinging the program:', programId.toBase58(), '\n')
+    // Build instructions
     const instructions = new TransactionInstruction({
         keys: [{
             pubkey: triggerKeypair.publicKey,
@@ -43,13 +44,11 @@ const PROGRAM_ID_IN_BASE58 = "4QUoN6yh4v4gB11TzwFjNAo9GULUB81hwPBRFfDPUkp1";
         programId: programId,
         data: Buffer.alloc(0),
     })
-    
+    // Build a tx
     const tx = new Transaction().add(instructions)
-    
+    // Send the TX
     const txId = await connection.sendTransaction(tx, [triggerKeypair])
-
     console.log('Tx ID:', txId)
-    console.log('Fee:', 1e9 - await connection.getBalance(triggerKeypair.publicKey, 'confirmed'))
 
 
 
